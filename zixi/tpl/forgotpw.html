@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<title>{$title}</title>
+	<meta name="description" content="{$description}">
+  <meta name="keywords" content="{$keywords}">
+  <link rel="shortcut icon" href="{$web_site}/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/com.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/header.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/login.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/forgotpw.css">
+  <script src="{$web_site}/js/jquery-1.9.1.min.js"></script>
+  <script src="{$web_site}/js/jquery.menu-aim.js"></script>
+  <script src="{$web_site}/js/com.js"></script>
+  <script src="{$web_site}/js/forgotpw.js"></script>
+
+<style>
+    #page_sub_nav { display: none; }
+</style>
+
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body> <![endif]-->
+<!--[if !IE]>
+<!--> <body data-twttr-rendered="true"><!--<![endif]-->
+<div id="outer-wrapper" class="clearfix new-header">
+{include file="header.html"}
+<!--内容-->
+<div id="page-container">
+    <div id="page-container-inner">
+    <article id="page-root">
+    <div class="login-container">
+       <div class="card-case vertical-shadow">
+          
+            <div class="pw-login">
+              <h3 class="regular-header">密码重设</h3>
+              <div class="pw-login-contents">
+                <form class="auth-form" id="forgotpwForm" name="forgotpwForm"  action="{$web_site}/forgotpw" method="POST" >
+                <img src="{$web_site}/images/hand-tree.png" width="75" height="75" class="tree">
+                <div class="field-container">
+                   <label class="field-label" for="identifier">账号邮箱</label>
+                   <input tabindex="1" id="memail" name="memail" class="simple-input ui-corner-all" value="{$memail}" >&nbsp;
+                   <input tabindex="2" id="submit-button" class="simple-button green" value="提 交" type="button">
+                </div>
+                
+                <div class="field-container">
+                 <div class="field-error span4" id="error-text">{$err_email}</div>
+                </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    </article>
+
+    <div id="end-of-page-spacer">&nbsp;</div>
+    </div>
+    </div>
+
+
+<!--内容-结束-->    
+</div>
+<div class="push"></div>
+{include file="footer.html"}
+<!-- zixi.org.cn Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F373a5160f96b2e16d6ffc7ced7340f47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

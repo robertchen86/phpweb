@@ -1,0 +1,1 @@
+function showallvideo(){$("div[id=videoitem]").removeClass("result-hidden");$("div[id=videoresult]").addClass("result-hidden")}function showallkng(){$("div[id=kngitem]").removeClass("result-hidden");$("div[id=kngresult]").addClass("result-hidden")};

@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<title>{$title}</title>
+	<meta name="description" content="{$description}">
+  <meta name="keywords" content="{$keywords}">
+  <link rel="shortcut icon" href="{$web_site}/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/com.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/header.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/signup2.css">
+  <script src="{$web_site}/js/jquery-1.9.1.min.js"></script>
+  <script src="{$web_site}/js/jquery.menu-aim.js"></script>
+  <script src="{$web_site}/js/com.js"></script>
+  <script src="{$web_site}/js/student_group_edit.js"></script>
+<style>
+    #page_sub_nav { display: none; }
+</style>
+
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body> <![endif]-->
+<!--[if !IE]>
+<!--> <body data-twttr-rendered="true"><!--<![endif]-->
+<div id="outer-wrapper" class="clearfix new-header">
+{include file="header.html"}
+<!--内容-->
+<div id="page-container">
+  <div id="page-container-inner">
+<article id="page-root">
+    <div class="completesignup-container card-case vertical-shadow">
+        <div class="completesignup-contents">
+        <img src="{$web_site}/images/hand-tree.png" width="75" height="75" class="tree">
+        <h3>
+            <span class="bold-text">分组修改</span>
+        </h3>
+        <form  method="POST" class="auth-form container" id="applyForm" name="applyForm" action="{$web_site}/student_group/edit/{$mgid}">
+        <div class="field-container row-fluid"><input type="hidden" id="member_id" name="member_id" value="{$member_id}" >
+        	<input type="hidden" id="web_site" name="web_site" value="{$web_site}" >
+        	<input type="hidden" id="mgid" name="mgid" value="{$mgid}" >
+            <label class="field-label span4" for="m_group_name">组名</label>
+            <input id="m_group_name" name="m_group_name" class="simple-input ui-corner-all span6" value="{$m_group_name}">
+        </div>
+        <!--<div class="field-container row-fluid">
+            <label class="field-label span4" for="m_t_apply_t_id">老师</label>
+            <select id="m_t_apply_t_id" name="m_t_apply_t_id" class="simple-input ui-corner-all span6" >{$m_option}
+            </select>
+        </div>
+        <div class="field-container row-fluid">
+            <label class="field-label span4" for="m_t_apply_content">验证信息</label>
+            <textarea id="m_t_apply_content" name="m_t_apply_content" class="simple-input ui-corner-all span6" style="margin: 1px 0px 1px 10.625px; width: 245px; height: 68px;"></textarea>
+        </div>-->
+        
+        <div class="error-container row-fluid">
+            <div class="field-error span10" id="error-text">&nbsp;</div>
+        </div>
+        <div class="field-container submit-container row-fluid">
+           
+            <div class="offset2 span5"></div>
+            <div class="span3">
+                <input type="button" id="btn_save" name="btn_save" value="提&nbsp;&nbsp;交" class="simple-button green">
+            </div>
+        </div>
+
+        </form>
+
+        </div>
+    </div>
+</article>
+    
+    
+    
+    <div id="end-of-page-spacer">&nbsp;</div>
+  </div>
+</div>
+<!--内容-结束-->    
+</div>
+<div class="push"></div>
+{include file="footer.html"}
+
+</body>
+</html>

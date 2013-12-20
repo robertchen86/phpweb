@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<title>{$title}</title>
+	<meta name="description" content="{$description}">
+  <meta name="keywords" content="{$keywords}">
+  <link rel="shortcut icon" href="{$web_site}/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/com.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/header.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/signup2.css">
+  <script src="{$web_site}/js/jquery-1.9.1.min.js"></script>
+  <script src="{$web_site}/js/jquery.menu-aim.js"></script>
+  <script src="{$web_site}/js/com.js"></script>
+  <script src="{$web_site}/js/avatar.js"></script>
+<style>
+    #page_sub_nav { display: none; }
+</style>
+
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body> <![endif]-->
+<!--[if !IE]>
+<!--> <body data-twttr-rendered="true"><!--<![endif]-->
+<div id="outer-wrapper" class="clearfix new-header">
+{include file="header.html"}
+<!--内容-->
+<div id="page-container">
+  <div id="page-container-inner">
+<article id="page-root">
+    <div class="completesignup-container card-case vertical-shadow">
+        <div class="completesignup-contents">
+            <img src="{if $member_logo eq ''}{$web_site}/images/dflogo.png{else}{$web_site}/images/mlogo/{$member_logo}{/if}" width="75" height="75" class="tree">
+        <h3>
+            <span class="bold-text">个人头像设置</span>
+        </h3>
+        <form  method="POST" class="auth-form container" id="avatarForm" name="avatarForm" action="{$web_site}/avatar" enctype="multipart/form-data">
+        <div class="field-container row-fluid">
+            <label class="field-label span4" >上传头像(100*100)：</label>
+            <input type="file" name="avatar" id="avatar" class="ui-corner-all span6" >
+            
+        </div>
+        <div class="error-container row-fluid">
+            <div class="field-error span10" id="error-text">&nbsp;{$err}</div>
+        </div>
+        <div class="field-container submit-container row-fluid">
+            
+            <div class="offset2 span5"></div>
+            <div class="span3">
+                <input type="button" id="submit-button" name="submit-button" value="保&nbsp;&nbsp;存" class="simple-button green">
+            </div>
+        </div>
+
+        </form>
+
+        </div>
+    </div>
+</article>
+    
+    
+    
+    <div id="end-of-page-spacer">&nbsp;</div>
+  </div>
+</div>
+<!--内容-结束-->    
+</div>
+<div class="push"></div>
+{include file="footer.html"}
+<!-- zixi.org.cn Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F373a5160f96b2e16d6ffc7ced7340f47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<title>{$title}</title>
+	<meta name="description" content="{$description}">
+  <meta name="keywords" content="{$keywords}">
+  <link rel="shortcut icon" href="{$web_site}/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/com.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/exam.css">
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.menu-aim.js"></script>
+  <script src="js/com.js"></script>
+  <script src="js/exam_log.js"></script>
+  <script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/highcharts-more.js"></script>
+<script src="js/highcharts/modules/exporting.js"></script>
+{literal}
+<style>
+    #page_sub_nav { display: none; }
+    .selectbox{-webkit-appearance:checkbox; margin:0 10px 0 0;}
+    .blackcolor{color:black;}
+    .answer_list{color:black;}
+    .answer_list_one{margin:10px 10px 10px 10px; height:30px;}
+    .answer_list_end{height:30px;}
+    
+    .answer_time{
+    	text-align:center;
+    }
+		.answer_action{
+		
+		}
+		.answer_action_left{
+			float:left;
+			color:black;
+			margin:0 0 0 100px;
+		}
+		.answer_action_left input{
+			width:21px;
+		}
+		
+		.answer_action_right{
+			float:right;
+			margin:0 200px 0 0;
+		}
+		.answer_action_right img{
+			margin:0 0 0 30px;
+		}
+		
+		.div_center{margin:0 auto;}
+		
+</style>
+{/literal}
+<script type="text/javascript">
+<!--
+	$(function () {
+    $('#container').highcharts({
+
+	    chart: {
+	        type: 'bubble',
+	        zoomType: 'xy'
+	    },
+
+	    title: {
+	    	text: "平面向量" //索引的二级知识点
+	    },
+		
+		  subtitle:{
+			text: "从2013年6月到2013年8月" //索引的时间
+		},
+	
+		yAxis:{
+			title:{
+				text:"平均耗时",
+				rotation: 0,
+				offset:60,
+			},
+		},
+		
+		xAxis:{
+			title:{
+				text:"做题组数"
+			},
+		},
+	
+		plotOptions:{
+			bubble:{
+				maxSize: '10%',
+				minSize: '2%',
+			},
+			line:{
+				showInLegend: false, // 不是主要元素，无需在图例中显示
+				marker: {
+					enabled: false // 无需显示线段标记
+				},
+				states: {
+					hover: {
+						lineWidth: 0
+					}
+				},
+				enableMouseTracking: false, //无需动画
+				dashStyle: 'Dot'
+			},
+		},
+		
+		tooltip:{
+			formatter:function(){
+				var s
+				s = '正确率' + '<br>' + this.point.z*100 + '%';
+				return s
+			},
+		},//设计鼠标悬浮后的信息提示
+		
+	    series: [{
+			type: 'bubble',
+	    	name: "平面向量的定义",
+			data:[[1,79,0.2],[2,59,0.2],[3,72,0.5],[4,43,0.5],[5,32,0.8],[6,37,1]]
+			//索引得到的数据，第一个为题组编号，第二个为平均使用时间，第三个为正确率
+	    }, {
+			type: 'bubble',
+	    	name: "平面向量的分量",
+			data:[[1,65,0.2],[2,85,0.6],[3,49,0.8],[4,68,1]]
+	    }, {
+			type: 'bubble',
+	    	name: "平面向量的数量积",
+			data:[[1,128,0.2],[2,47,0.5],[3,140,1]]
+	    }
+	    , {
+			type: 'bubble',
+	    	name: "cecesis",
+			data:[[1,180,0.2],[2,30,0.5],[3,10,1]]
+	    }
+	    ,{
+			type: 'line',
+			color: '#2f7ed8', //color #1
+			data:[[1,79],[2,59],[3,72],[4,43],[5,32],[6,37]],	//重复之前的数据，但是仅取x和y值	
+		},{
+			type: 'line',
+			color: '#0d233a', //color #2
+			data:[[1,65],[2,85],[3,49],[4,68]],	
+		},{
+			type: 'line',
+			color: '#8bbc21', //color #3
+			data:[[1,128],[2,47],[3,140]],			
+		}
+		,{
+			type: 'line',
+			color: '#910000', //color #3
+			data:[[1,180],[2,30],[3,10]],			
+		}
+		
+		],
+		// The next default color is '#910000',
+
+	});//end of container.high charts
+    
+}); -->
+</script>
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body  > <![endif]-->
+<!--[if !IE]>
+<!--> <body data-twttr-rendered="true"  ><!--<![endif]-->
+<div id="outer-wrapper" class="clearfix new-header">
+{include file="header.html"}
+<!--内容-->
+<div id="page-container">
+    <div id="page-container-inner">
+
+<article id="tutorial-page">
+    <div class="tutorial-nav docked-nav" data-khan-nav="true">
+    	<div class="nav-container affix-top">
+    		<div class="nav-container affix-top">
+<div class="topic-nav-header math">
+    <div class="crumbs">
+        <div class="subject subject-color">
+           <a href="">习题记录回顾</a>
+        </div>
+    </div>
+</div>
+
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: auto;">
+	
+<div class="slimScrollBar ui-draggable" style="background-color: rgb(102, 102, 102); width: 8px; position: absolute; top: 0px; opacity: 0.4; display: none; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; z-index: 99; right: 5px; height: 453px;"></div><div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-color: rgb(51, 51, 51); opacity: 0.3; z-index: 90; right: 5px; background-position: initial initial; background-repeat: initial initial;"></div><div class="shadow"><img src="./nei4_files/round-shadow.png" style="top: -10px;"></div><div class="shadow bottom"><img src="./nei4_files/round-shadow-bottom.png" style="bottom: -10px; top: auto;"></div><div class="shadow"><img src="/images/round-shadow.png" style="top: -10px;"></div><div class="shadow bottom"><img src="/images/round-shadow-bottom.png" style="bottom: 0px; top: auto;"></div></div>
+</div></div>
+    </div>
+
+    <!--主内容-->
+    <div class="tutorial-content">
+      <div class="layers">
+        <div class="content layer">
+        	<div class="answer_time">
+        		<h1>习题记录回顾</h1>
+        	</div>
+        	
+     <form name="exam_set" id="exam_set" method="post" action="./?a=exam_log" >
+     <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  	<tbody>
+  	
+    <tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr class="tdbg">
+		 	<td align="center">属性：</td>
+			<td >
+				关联知识点：
+				<select name="kng_set_id" id="kng_set_id"><option value="0">请选择知识点</option>{$kng_list}</select>&nbsp;&nbsp;<br/>
+				关联视频：<br/>
+				<input type="hidden" name="video_ids" id="video_ids" value=""/>
+				<table id="video_list_show">
+					<tr>
+						<td>{$video_list}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+  	 
+    <tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr class="tdbg">
+	  <td>&nbsp;</td>
+      <td><input type="button" class="bnt" value="修 改" id="btn_save"> <input type="button" class="bnt" value="上一题" id="btn_pre"> <input type="button" class="bnt" value="下一题" id="btn_next"> </td>
+    </tr>
+    
+		
+    <tr class="tdbg">
+    	<td colspan="2" >
+	      <div id="container" style="height: 400px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+	    </td>
+	  </tr>
+  </tbody>
+  </table>
+        </form>
+          <div class="answer_list_end"></div>
+        </div>
+        
+        
+        </div>
+    </div>
+</article>
+
+    <div id="end-of-page-spacer">&nbsp;</div>
+
+    </div>
+ </div>
+<!--neirong end-->
+</div>
+<div class="push"></div>
+{include file="footer.html"}
+</body>
+</html>

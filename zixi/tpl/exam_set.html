@@ -1,0 +1,221 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+	<title>{$title}</title>
+	<meta name="description" content="{$description}">
+  <meta name="keywords" content="{$keywords}">
+  <link rel="shortcut icon" href="{$web_site}/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/com.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/header.css">
+  <link rel="stylesheet" type="text/css" href="{$web_site}/css/exam.css">
+  <script src="{$web_site}/js/jquery-1.9.1.min.js"></script>
+  <script src="{$web_site}/js/jquery.menu-aim.js"></script>
+  <script src="{$web_site}/js/com.js"></script>
+  <script src="{$web_site}/js/exam_set.js"></script>
+ 
+ {literal}
+<style>
+    #page_sub_nav { display: none; }
+    .selectbox{-webkit-appearance:checkbox; margin:0 10px 0 0;}
+    .blackcolor{color:black;}
+    .answer_list{color:black;}
+    .answer_list_one{margin:10px 10px 10px 10px; height:30px;}
+    .answer_list_end{height:30px;}
+    
+    .answer_time{
+    	text-align:center;
+    }
+    
+		.answer_action{
+		
+		}
+
+		.answer_action_left{
+			float:left;
+			color:black;
+			margin:0 0 0 100px;
+		}
+		.answer_action_left input{
+			width:21px;
+		}
+		
+		.answer_action_right{
+			float:right;
+			margin:0 200px 0 0;
+		}
+		.answer_action_right img{
+			margin:0 0 0 30px;
+		}
+		
+		.div_center{margin:0 auto;}
+		
+</style>
+{/literal}
+{if $timemax}
+<script>
+	var timemax = {$timemax};
+</script>
+{/if}
+</head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body  > <![endif]-->
+<!--[if !IE]>
+<!--> <body data-twttr-rendered="true"  ><!--<![endif]-->
+<div id="outer-wrapper" class="clearfix new-header">
+{include file="header.html"}
+<!--内容-->
+<div id="page-container">
+    <div id="page-container-inner">
+
+<article id="tutorial-page">
+    <div class="tutorial-nav docked-nav" data-khan-nav="true">
+    	<div class="nav-container affix-top">
+    		<div class="nav-container affix-top">
+<div class="topic-nav-header math">
+    <div class="crumbs">
+        <div class="subject subject-color">
+           <a href="">试题关联设置</a>
+           
+        </div>
+    </div>
+</div>
+
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: auto;">
+	<!--
+	<div class="topic-nav-content math" data-khan-scroll="true" style="overflow: hidden; width: auto; height: auto;">
+    <ol class="core">
+      
+        <li id="v/basic-addition" class="tutorial-nav-node video-node">
+					<a class="tutorial-router-link tab-link  progress-container clearfix">
+						<div class="subway-icon v23798">
+							<div class="pipe"></div>
+							<div class="pipe completed"></div>
+							<div class="status {if $videoitem.video_id eq $videoId}v23798{/if} video-node">
+							</div>
+						</div>
+				
+						<span class="progress-title">测试中请勿刷新</span>
+					</a>
+				</li>
+				<li id="v/basic-addition" class="tutorial-nav-node video-node">
+					<a class="tutorial-router-link tab-link  progress-container clearfix">
+						<div class="subway-icon v23798">
+							<div class="pipe"></div>
+							<div class="pipe completed"></div>
+							<div class="status {if $videoitem.video_id eq $videoId}v23798{/if} video-node">
+							</div>
+						</div>
+				
+						<span class="progress-title">当前进度：<span class="current_exam">1</span>&nbsp;/&nbsp;<span>{$examcount}</span></span>
+					</a>
+				</li>
+    
+    </ol>
+
+    
+</div>-->
+<div class="slimScrollBar ui-draggable" style="background-color: rgb(102, 102, 102); width: 8px; position: absolute; top: 0px; opacity: 0.4; display: none; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; z-index: 99; right: 5px; height: 453px;"></div><div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-color: rgb(51, 51, 51); opacity: 0.3; z-index: 90; right: 5px; background-position: initial initial; background-repeat: initial initial;"></div><div class="shadow"><img src="./nei4_files/round-shadow.png" style="top: -10px;"></div><div class="shadow bottom"><img src="./nei4_files/round-shadow-bottom.png" style="bottom: -10px; top: auto;"></div><div class="shadow"><img src="/images/round-shadow.png" style="top: -10px;"></div><div class="shadow bottom"><img src="/images/round-shadow-bottom.png" style="bottom: 0px; top: auto;"></div></div>
+
+
+
+    </div></div>
+    </div>
+
+    <div class="tutorial-content">
+      <div class="layers">
+        <div class="content layer">
+        	<div class="answer_time">
+        		<h1>试题关联设置</h1>
+        	</div>
+        	
+ <form name="exam_set" id="exam_set" method="post" action="./?a=exam_set" >
+        	<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1">
+  	<tbody>
+  	
+  	<tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+  	
+  	<tr class="tdbg">
+  		<td width="12%" align="center" >所属知识点：</td>
+  		<td><select id="kng_id" name="kng_id">{$kng_list}</select>
+  			<select id="kng_v_type" name="kng_v_type">
+  				<option value="">全部</option>
+  				<option value="1" {if $kng_v_type eq '1'}selected{/if} >视频未关联</option>
+   				<option value="2" {if $kng_v_type eq '2'}selected{/if} >视频已经关联</option>
+  			</select>
+  			<span id='kng_exam_count'></span>
+  		</td>
+  	</tr>
+  	<tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+  	<tr class="tdbg">
+		 	<td align="center">试题序号：</td>
+			<td >
+				<input type="text" id="exam_id" name="exam_id" readonly size="5" value="{$examinfo.exam_id}" />
+			</td>
+		</tr>
+		<tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+   <tr class="tdbg">
+      <td width="12%" align="center" >试题题目：</td>
+      <td border=1>
+      	<!--<textarea name="exam_title" id="exam_title" class="ke-textarea" style="height: 280px;width:680px"></textarea>-->
+      	<span class="exam_title">{$examinfo.exam_title}</span>
+      	<input name="act" id="act" value="" type="hidden"/>
+      	<input name="updown" id="updown" value="1" type="hidden"/>
+      </td>
+    </tr>
+    <tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr class="tdbg">
+		 	<td align="center">属性：</td>
+			<td >
+				关联知识点：
+				<select name="kng_set_id" id="kng_set_id"><option value="0">请选择知识点</option>{$kng_list}</select>&nbsp;&nbsp;<br/>
+				关联视频：<br/>
+				<input type="hidden" name="video_ids" id="video_ids" value="{$examinfo.exam_video_id}"/>
+				<table id="video_list_show">
+					<tr>
+						<td>{$video_list}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+  	 
+    <tr class="tdbg"><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr class="tdbg">
+	  <td>&nbsp;</td>
+      <td><input type="button" class="bnt" value="修 改" id="btn_save"> <input type="button" class="bnt" value="上一题" id="btn_pre"> <input type="button" class="bnt" value="下一题" id="btn_next"> </td>
+    </tr>
+    
+		
+    <tr class="tdbg">
+	  
+	
+  </tbody></table>
+        </form>
+          <div class="answer_list_end"></div>
+        </div>
+        
+        
+        </div>
+    </div>
+</article>
+
+            <div id="end-of-page-spacer">&nbsp;</div>
+
+    </div>
+    </div>
+<!--neirong end-->
+
+</div>
+<div class="push"></div>
+{include file="footer.html"}
+<!-- zixi.org.cn Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F373a5160f96b2e16d6ffc7ced7340f47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

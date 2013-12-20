@@ -1,0 +1,1 @@
+$(document).ready(function(){$("input[name =search_query]").bind("keydown",function(a){if(a.keyCode==13){document.searchForm.submit()}})});

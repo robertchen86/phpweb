@@ -1,0 +1,78 @@
+<Files *>
+Options -Indexes
+</Files>
+#<Files favicon.ico>
+ # ErrorDocument 404 "The requested file favicon.ico was not found."
+#</Files>
+ErrorDocument 404 /404.shtml
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteCond  %{HTTP_HOST} !^www.cncabletray.com$ [NC]
+#RewriteRule  ^(.*)$ http://www.cncabletray.com/$1 [L,R=301]
+
+RewriteRule  ^privacy-policy$ index.php?a=privacy-policy [L]
+RewriteRule  ^tos$  index.php?a=tos [L]
+RewriteRule  ^library$  index.php?a=library [L]
+RewriteRule  ^avatar$  index.php?a=avatar [L]
+RewriteRule  ^setting/([0-1]+)/$  index.php?a=setting&type=$1 [L]
+RewriteRule  ^setting/([0-1]+)$  index.php?a=setting&type=$1 [L]
+RewriteRule  ^profile/([0-1]+)/(.*)/$  index.php?a=profile&type=$1&mc=$2 [L]
+RewriteRule  ^profile/([0-1]+)/(.*)$  index.php?a=profile&type=$1&mc=$2 [L]
+RewriteRule  ^playlog$ index.php?a=playlog [L]
+RewriteRule  ^tdpostcomment$ index.php?a=tdpostcomment [L]
+RewriteRule  ^delcomment$ index.php?a=delcomment [L]
+RewriteRule  ^editcomment$ index.php?a=editcomment [L]
+RewriteRule  ^postcomment$ index.php?a=postcomment [L]
+RewriteRule  ^search$  index.php?a=search [L]
+RewriteRule  ^completepwset$  index.php?a=completepwset [L]
+RewriteRule  ^completesignup$  index.php?a=completesignup [L]
+RewriteRule  ^pwset/ac=(.*)&mname=(.*)&memail=(.*)$ index.php?a=pwset&ac=$1&mname=$2&memail=$3 [L]
+RewriteRule  ^signup/ac=(.*)&mname=(.*)&memail=(.*)$ index.php?a=signup&ac=$1&mname=$2&memail=$3 [L]
+RewriteRule  ^logout$ index.php?a=logout [L]
+RewriteRule  ^login$ index.php?a=tologin [L]
+RewriteRule  ^signup$ index.php?a=tosignup [L]
+RewriteRule  ^forgotpw$ index.php?a=forgotpw [L]
+RewriteRule  ^exam$ index.php?a=exam [L]
+RewriteRule  ^exam_log$ index.php?a=exam_log [L]
+
+
+
+RewriteRule  ^exam_online/([0-9]+)/([0-9]+)/video/([0-9]+)$ index.php?a=exam_online&footKngId=$1&twoKngId=$2&videoId=$3 [L]
+RewriteRule  ^exam_online/([0-9]+)/([0-9]+)/video/([0-9]+)/result/([0-9_\-:]+)$ index.php?a=exam_result&footKngId=$1&twoKngId=$2&videoId=$3&gtime=$4 [L]
+
+RewriteRule  ^examerr$  index.php?a=exam_err [L]
+RewriteRule  ^exam_set$  index.php?a=exam_set [L]
+RewriteRule  ^exam_log$  index.php?a=exam_log [L]
+RewriteRule  ^exam_s_log$  index.php?a=exam_s_log [L]
+RewriteRule  ^exam_err_log$  index.php?a=exam_err_log [L]
+
+RewriteRule  ^student_group/add$  index.php?a=student_group_add [L]
+RewriteRule  ^student_group/edit/([0-9]+)$  index.php?a=student_group_edit&mgid=$1 [L]
+RewriteRule  ^student_group/del/([0-9]+)$  index.php?a=student_group_del&mgid=$1 [L]
+RewriteRule  ^student_group_set/([0-9]+)$  index.php?a=student_group_set&sid=$1 [L]
+RewriteRule  ^student_test_view/([0-9]+)$  index.php?a=student_test_view&sid=$1 [L]
+
+RewriteRule  ^exam_q_reply/([0-9]+)$  index.php?a=exam_q_reply&qid=$1 [L]
+RewriteRule  ^student_del/([0-9]+)$  index.php?a=student_del&sid=$1 [L]
+
+
+RewriteRule  ^teacher_apply$  index.php?a=teacher_apply [L]
+RewriteRule  ^completesignup2$  index.php?a=completesignup2 [L]
+RewriteRule  ^ct_signup/(.*)/(.*)/(.*)$ index.php?a=ct_signup&uid=$1&username=$2&email=$3 [L]
+RewriteRule  ^apply_check/([0-9]+)$  index.php?a=apply_check&aid=$1 [L]
+RewriteRule  ^apply_edit/([0-9]+)$  index.php?a=apply_edit&aid=$1 [L]
+
+RewriteRule  ^exam_q_edit/([0-9]+)$  index.php?a=exam_q_edit&qid=$1 [L]
+RewriteRule  ^exam_q_del/([0-9]+)$  index.php?a=exam_q_del&qid=$1 [L]
+RewriteRule  ^exam_q_tdel/([0-9]+)$  index.php?a=exam_q_tdel&qid=$1 [L]
+
+
+
+
+#RewriteRule  ^kng/([0-9]+)/([0-9]+)/([0-9]+)/video/([0-9]+)$ index.php?a=video&footKngId=$1&twoKngId=$2&threeKngId=$3&videoId=$4 [L]
+#RewriteRule  ^kng/([0-9]+)/([0-9]+)/([0-9]+)$ index.php?a=kng&footKngId=$1&twoKngId=$2&threeKngId=$3 [L]
+RewriteRule  ^kng/([0-9]+)/([0-9]+)/video/([0-9]+)$ index.php?a=video&footKngId=$1&twoKngId=$2&videoId=$3 [L]
+RewriteRule  ^kng/([0-9]+)/([0-9]+)$ index.php?a=kng&footKngId=$1&twoKngId=$2 [L]
+RewriteRule  ^exam/([0-9]+)/([0-9]+)/video/([0-9]+)$ index.php?a=exam&footKngId=$1&twoKngId=$2&videoId=$3&examId=1 [L]
+RewriteRule  ^exam/([0-9]+)/([0-9]+)/video/([0-9]+)/id/([0-9]+)/([0-9]+)/(.*)/([0-9]+)/(.*)$ index.php?a=exam&footKngId=$1&twoKngId=$2&videoId=$3&examId=$4&selectId=$5&select=$6&time=$7&g_time=$8 [L]
+</IfModule>

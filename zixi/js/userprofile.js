@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".dropdown-toggle-new").bind("mouseover",function(){$(".dropdown-toggle-new").parent(".dropdown-new").addClass("open")});$(".dropdown-menu-new").bind("mousemove",function(){$(".dropdown-toggle-new").parent(".dropdown-new").addClass("open")});$(".dropdown-new").bind("mouseout",function(){$(".dropdown-new").removeClass("open")})});

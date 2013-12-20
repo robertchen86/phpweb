@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>KindEditor</title>
+		<style>
+			textarea {
+				display: block;
+			}
+		</style>
+		<script charset="utf-8" src="../kindeditor.js"></script>
+		<script>
+			KE.show({
+				id : 'content6',
+				width : '80%',
+				resizeMode : 1,
+				cssPath : './index.css'
+			});
+			KE.show({
+				id : 'content7',
+				resizeMode : 0,
+				cssPath : './index.css'
+			});
+		</script>
+	</head>
+	<body>
+		<h3>只能调整高度</h3>
+		<textarea id="content6" name="content" cols="100" rows="10"></textarea>
+		<h3>禁止拖动调整大小</h3>
+		<textarea id="content7" name="content" cols="100" rows="10"></textarea>
+	<!-- zixi.org.cn Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F373a5160f96b2e16d6ffc7ced7340f47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

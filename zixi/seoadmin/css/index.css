@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*公共的层样式*******************************************/
+body{margin:0px;padding:0px;font-family:Verdana, Arial, Helvetica, sans-serif,"宋体";font-size:12px;color:#666666;background:#e7edf2; /*#daedda;*/}
+/*公共的层样式*******************************************/
+img{border:0px;}
+form{margin:0px;padding:0px;font-family:Verdana, Arial, Helvetica, sans-serif,"宋体";}/*所有网页中的表单都没有内外边距，边框也有0（除下面另有样式设置）*/
+input{font-family:Verdana, Arial, Helvetica, sans-serif,"宋体"; font-size:12px;}
+/*select{font-family:Verdana, Arial, Helvetica, sans-serif,"宋体"; font-size:12px;}*/
+textarea{font-family:Verdana, Arial, Helvetica, sans-serif,"宋体"; font-size:12px;}
+ul{list-style:none;margin:0px;padding:0px;}
+.b{font-weight:bold;}
+.clear_both_0px{clear:both; font-size:0px; line-height:0px; height:0px;}
+.clear_both{clear:both;}
+/********************************************/
+.text_align_right{text-align:right;}
+.text_align_center{text-align:center;}
+.overflow_hidden{overflow:hidden;}
+
+/*zi******************************************/
+
+.zi_13{font-size:13px;}
+.fontWeight_300{ font-weight:300;}
+.lan{color:#004276;}
+/*login 第一部分:  登录界面  包含:背景,用户名和密码输入框,验证码******************************************/
+#login_top{ width:100%; height:56px; background-image:url(../images/admin_01.jpg); background-repeat:repeat-x;}
+	#login_top .login_top_zi{font-size:12px;color:#ced9e5; padding:20px 0px 0px 20px;}
+	#login_top .login_top_zi a:link {color:#ced9e5;}
+	#login_top .login_top_zi a:visited {color:#ced9e5;}
+	#login_top .login_top_zi a:hover {color:#ced9e5;}
+	#login_top .login_top_zi a:active {color:#ced9e5;}
+
+#login{margin:auto; width:518px;}
+	#login_logo{width:518px;text-align:center;}
+	#login_login{width:504px;height:354px;margin-top:40px;background-image:url(../images/login_bg.jpg); background-repeat:no-repeat;}
+		#login_login .login_login_body{ padding:100px 110px;}
+			#login_login .login_login_body li{ margin:8px 0px; color:#9c9c9d;}
+			#login_login .login_login_body form{margin:0px;padding:0px;}
+			#login_login .login_login_body input{font-family:Verdana, Arial, Helvetica, sans-serif; background-color:#fbfbfb; border:#e7e7e5 1px solid; height:15px; width:264px; padding:6px; color:#9c9c9d;}
+			#login_login .login_login_body .input_auto{font-family:Verdana, Arial, Helvetica, sans-serif;border:0px; height:auto; width:auto; padding:3px; color:#9c9c9d;}
+			#login_login .login_login_body .input_72x24{font-family:Verdana, Arial, Helvetica, sans-serif;border:0px; height:24px; width:72px; padding:3px; color:#9c9c9d;}
+			#login_login .login_login_body select{font-family:Verdana, Arial, Helvetica, sans-serif;}

@@ -1,0 +1,39 @@
+.section-separator {
+margin-top: 20px;
+margin-bottom: -10px;
+position: relative;
+}
+.section-row-one{
+	
+}
+.section-row-one-left{
+	float:left;
+	width:765px;
+}
+.section-row-one-left .span4{
+	margin:0 0 0 25px;
+}
+.section-row-one-right{
+	float:right;
+}
+
+.section-row-one-right-content{
+	width:365px;
+	margin:22px 0 0 20px;
+}
+
+.nw-video{
+	width:134px;
+	float:left;
+	margin:0 8px 0 8px;
+}
+
+.large-font {
+font-size: 16px;
+}
+.row-fluid .span3 {
+width: 6.404255319148934%;
+}
+.row-fluid .span9 {
+width: 91.46808510638297%;
+}

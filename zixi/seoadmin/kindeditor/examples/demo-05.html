@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>KindEditor</title>
+		<link rel="stylesheet" href="../skins/default.css" />
+		<script charset="utf-8" src="../kindeditor.js"></script>
+		<script>
+			KE.show({
+				id : 'content5',
+				loadStyleMode : false
+			});
+			function checkForm() {
+				if (KE.util.isEmpty('content5')) {
+					alert('请输入内容！');
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>手动添加CSS文件</h3>
+		<textarea id="content5" name="content1" style="width:700px;height:300px;"></textarea>
+	<!-- zixi.org.cn Baidu tongji analytics -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F373a5160f96b2e16d6ffc7ced7340f47' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
